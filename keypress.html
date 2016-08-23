@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Key stroke detector</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css"></link>
+    <link rel="stylesheet" type="text/css" href="keypress.css">
+    <script src="bower_components/es6-promise/promise.min.js"></script>
+    <link rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="box.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <button class="btn btn-primary" id="btn" style="
+    margin-top: 450px;
+    width: 236px;
+    height: 84px;
+        font-size: 50px;" onclick="show();start()">Start</button>
+    </div>
+    <div class="container" id="disp" style="display :none">
+        <div class="row">
+            <div id="timer">
+                <div>
+                    <div id="countdown" class="countdown countdown--wide">
+                        <div id="ticker" class="countdown__fill"></div>
+                        <div id="seconds" class="countdown__digit">00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="margin-top:30px;">Value:
+                <span id="show"> </span>
+            </div>
+            <div class="col-md-4">
+                <div id="scoreboard" style="margin-right: 30px;">
+                    <div>
+                        <span id="points"></span>
+                        <div class="smalltext" style="color:white;">Score</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="margin-top:30px;">Input:
+                <span id="result">Press a key</span>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    function show() {
+        document.getElementById("disp").style.display = "initial";
+        document.getElementById("btn").style.display = "none";
+        timer.start();
+    }
+    </script>
+    <script type="text/javascript" src="keypress.js"></script>
+    <script src="bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+    <!-- clock -->
+    <link rel="stylesheet" type="text/css" href="clock.css">
+</body>
+
+</html>

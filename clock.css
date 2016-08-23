@@ -1,0 +1,14 @@
+.countdown {
+    margin-right: 7px;
+    font-family: 'Oswald', sans-serif;
+    transition-duration: 0.2s;
+    &--ended {
+        animation: buzz 0.5s;
+    }
+}
+
+#timer {
+    font-size: 50px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
